@@ -10,6 +10,8 @@
             color: #000;
             margin: 0;
             padding: 0;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         header {
             position: relative;
@@ -70,7 +72,7 @@
             border-radius: 5px;
             margin: 5px;
             transition: background 0.3s ease;
-            text-align: center;
+            color: #fff;
         }
         .tab:hover {
             background-color: #0056b3;
@@ -78,7 +80,8 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #fff;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
             top: 100%;
@@ -91,12 +94,12 @@
         .dropdown-content a {
             display: block;
             padding: 10px;
-            color: #000;
+            color: #fff; /* Light text color */
             text-decoration: none;
             text-align: center;
         }
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
+            background-color: #555;
         }
         .tab:hover .dropdown-content {
             display: block;
@@ -104,6 +107,9 @@
         }
         .content {
             display: none;
+            max-width: 1000px; /* Limit content width */
+            margin: 0 auto; /* Center content */
+            padding: 20px;
         }
         .active {
             display: block;
@@ -138,7 +144,6 @@
             }
             .dropdown-content {
                 width: 100%;
-                left: 0; /* Ensure dropdown aligns to the left */
             }
         }
         /* Align dropdown to the left */
@@ -162,21 +167,19 @@
         <p>Innovation Catalyst</p>
     </header>
 
-    <div class="tabs-container">
-        <div class="tabs">
-            <div class="tab" onclick="showSection('get-in-touch')">Get in Touch</div>
-            <div class="tab" onclick="showSection('about')">About Me</div>
-            <div class="tab">
-                Experience
-                <div class="dropdown-content">
-                    <a href="#implementation-consultant" onclick="showSection('implementation-consultant')">Implementation Consultant</a>
-                    <a href="#account-manager" onclick="showSection('account-manager')">Account Manager</a>
-                </div>
+    <div class="tabs">
+        <div class="tab" onclick="showSection('get-in-touch')">Get in Touch</div>
+        <div class="tab" onclick="showSection('about')">About Me</div>
+        <div class="tab">
+            Experience
+            <div class="dropdown-content">
+                <a href="#implementation-consultant" onclick="showSection('implementation-consultant')">Implementation Consultant</a>
+                <a href="#account-manager" onclick="showSection('account-manager')">Account Manager</a>
             </div>
-            <div class="tab" onclick="showSection('learning')">Learning</div>
-            <div class="tab" onclick="showSection('career')">Career Exploration</div>
-            <div class="tab" onclick="showSection('social')">Social Responsibility</div>
         </div>
+        <div class="tab" onclick="showSection('learning')">Learning</div>
+        <div class="tab" onclick="showSection('career')">Career Exploration</div>
+        <div class="tab" onclick="showSection('social')">Social Responsibility</div>
     </div>
 
     <div class="container">
@@ -205,6 +208,11 @@
         <div id="learning" class="content">
             <div class="section">
                 <h2>Learning</h2>
+                <div class="section">
+                    <h2>Education</h2>
+                    <h3>BBA, Marketing <span style="text-align:center; display:inline-block; width: 50%;">University of Balamand, LB</span> <span style="float:right;">03/2014 - 09/2019</span></h3>
+                    <p>Key accomplishments: 2018 - 2019 Dean's Honor-List | GPA 3.0 | Marketing Research | Entrepreneurship</p>
+                </div>
                 <ul>
                     <li>Applications & Tools: TeamWork | Canva | Smartsheet | MS 365 Apps | Google Ads | SQL</li>
                     <li>Special courses: McKinsey Forward Program | Learning how to learn | Digital marketing | Business Planning & ROI</li>
