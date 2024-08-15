@@ -8,7 +8,6 @@
         body {
             font-family: Arial, sans-serif;
             color: #000;
-            background-color: #E6EEF7;
             margin: 0;
             padding: 0;
         }
@@ -32,23 +31,36 @@
             z-index: -1;
         }
         header p {
-            background-color:  linear-gradient(to right, #E6EEF7, #002147);
+            background-color: #ADD8E6; /* Light blue background */
             display: inline;
             padding: 5px 10px;
             border-radius: 5px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+        .tabs-container {
+            background: linear-gradient(to right, #E6EEF7, #002147);
+            position: relative;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+        .tabs-container::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: inherit;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+            z-index: -1;
         }
         .tabs {
             display: flex;
             justify-content: space-around;
-            background-color: #002147;
             color: #fff;
             position: relative;
             flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
         }
         .tab {
             padding: 10px 20px;
@@ -112,17 +124,6 @@
             color: #002147;
             text-decoration: none;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-icons {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .contact-icons img {
-            margin-right: 10px;
-        }
         /* Responsive Navigation */
         @media (max-width: 768px) {
             .tabs {
@@ -161,8 +162,7 @@
 
     <div class="tabs">
         <div class="tab" onclick="showSection('get-in-touch')">Get in Touch</div>
-        <div class="tab" onclick="showSection('skills')">Skills</div>
-        <div class="tab" onclick="showSection('about')">About</div>
+	<div class="tab" onclick="showSection('about')">About Me</div>
         <div class="tab">
             Experience
             <div class="dropdown-content">
@@ -170,6 +170,7 @@
                 <a href="#account-manager" onclick="showSection('account-manager')">Account Manager</a>
             </div>
         </div>
+	<div class="tab" onclick="showSection('Learning')">Learning</div>
         <div class="tab" onclick="showSection('career')">Career Exploration</div>
         <div class="tab" onclick="showSection('education')">Education</div>
         <div class="tab" onclick="showSection('social')">Social Responsibility</div>
@@ -198,10 +199,17 @@
             </div>
         </div>
 
-        <div id="skills" class="content">
+        <div id="learning" class="content">
             <div class="section">
-                <h2>Skills & Courses</h2>
+                <h2>Learning</h2>
                 <ul>
+		        <div id="education" class="content">
+            <div class="section">
+                <h2>Education</h2>
+                <h3>BBA, Marketing <span style="text-align:center; display:inline-block; width: 50%;">University of Balamand, LB</span> <span style="float:right;">03/2014 - 09/2019</span></h3>
+                <p>Key accomplishments: 2018 - 2019 Dean's Honor-List | GPA 3.0 | Marketing Research | Entrepreneurship</p>
+            </div>
+        </div>
                     <li>Applications & Tools: TeamWork | Canva | Smartsheet | MS 365 Apps | Google Ads | SQL</li>
                     <li>Special courses: McKinsey Forward Program | Learning how to learn | Digital marketing | Business Planning & ROI</li>
                 </ul>
@@ -257,14 +265,6 @@
                 <h2>Career Exploration</h2>
                 <h3>Project Management Trainee <span style="text-align:center; display:inline-block; width: 50%;">CSR Al Ahli, Beirut, LB</span> <span style="float:right;">06/2019 - 08/2019</span></h3>
                 <p>Areas of focus: Entrepreneurship | Youth Empowerment | Social Responsibility | Soft Skills Development | Education</p>
-            </div>
-        </div>
-
-        <div id="education" class="content">
-            <div class="section">
-                <h2>Education</h2>
-                <h3>BBA, Marketing <span style="text-align:center; display:inline-block; width: 50%;">University of Balamand, LB</span> <span style="float:right;">03/2014 - 09/2019</span></h3>
-                <p>Key accomplishments: 2018 - 2019 Dean's Honor-List | GPA 3.0 | Marketing Research | Entrepreneurship</p>
             </div>
         </div>
 
