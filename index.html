@@ -39,7 +39,7 @@
             z-index: -1;
         }
         header p {
-            background-color: #E6EEF7; /* Light blue background */
+            background-color: #0952ab; /* Light blue background */
             display: inline;
             padding: 5px 10px;
             border-radius: 5px;
@@ -164,6 +164,17 @@
         .tab .dropdown-content {
             left: 0;
         }
+        /* New CSS for About Me Section */
+    .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .about-text {
+        max-width: 600px; /* Limit content width */
+    }
+</style>
     </style>
     <script>
         function showSection(section) {
@@ -239,10 +250,12 @@
             </div>
         </div>
 
-        <div id="about" class="content">
-            <div class="section">
-                <h2>About Me</h2>
-                <img src="003.jpg" alt="Bahaa Eldine Olabi" class="profile-pic">
+       <div id="about" class="content">
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="003.jpg" alt="Bahaa Eldine Olabi" class="profile-pic">
+            <div class="about-text">
                 <p>Hello! I am Bahaa Eldine Olabi, an innovation catalyst born and raised in Rashaya Al Wadi, the village of independence in Lebanon.</p>
 <p>As an Advocate (INFJ-A), I am deeply driven by a passion for positive change and meaningful connections. I specialize in driving transformative projects and fostering innovation within organizations. My work involves developing and implementing strategies that enhance operational efficiency, promote creativity, and lead to sustainable growth. I have a proven track record of successful project delivery and a deep understanding of the latest industry trends and technologies.</p>
 <p>I am a strong advocate for empathetic communication and pride myself on being a good listener. This quality allows me to truly understand the needs and perspectives of others, which is crucial in fostering collaboration and achieving successful outcomes.</p>
