@@ -167,12 +167,13 @@
         /* New CSS for About Me Section */
         .about-container {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
         }
-
         .about-text {
             max-width: 600px; /* Limit content width */
+            text-align: center; /* Center text on smaller screens */
         }
     </style>
     <script>
@@ -191,60 +192,54 @@
         <p>Innovation Catalyst</p>
     </header>
 
-    <div class="tabs">
-        <div class="tab" onclick="showSection('get-in-touch')">Get in Touch</div>
-        <div class="tab" onclick="showSection('about')">About Me</div>
-        <div class="tab">
-            Experience
-            <div class="dropdown-content">
-                <a href="#implementation-consultant" onclick="showSection('implementation-consultant')">Implementation Consultant</a>
-                <a href="#account-manager" onclick="showSection('account-manager')">Account Manager</a>
+    <div class="tabs-container">
+        <div class="tabs">
+            <div class="tab" onclick="showSection('get-in-touch')">Get in Touch</div>
+            <div class="tab" onclick="showSection('about')">About Me</div>
+            <div class="tab">
+                Experience
+                <div class="dropdown-content">
+                    <a href="#implementation-consultant" onclick="showSection('implementation-consultant')">Implementation Consultant</a>
+                    <a href="#account-manager" onclick="showSection('account-manager')">Account Manager</a>
+                </div>
             </div>
+            <div class="tab" onclick="showSection('learning')">Learning</div>
+            <div class="tab" onclick="showSection('career')">Career Exploration</div>
+            <div class="tab" onclick="showSection('social')">Social Responsibility</div>
         </div>
-        <div class="tab" onclick="showSection('learning')">Learning</div>
-        <div class="tab" onclick="showSection('career')">Career Exploration</div>
-        <div class="tab" onclick="showSection('social')">Social Responsibility</div>
     </div>
 
     <div class="container">
         <div id="get-in-touch" class="content active">
             <div class="section">
                 <h2>Get in Touch</h2>
-                <div class="contact-icons">
-                    <img src="phone-icon.png" alt="Phone Icon" width="24" height="24">
-                    <p>Mobile: +971-54-5627172</p>
-                </div>
-                <div class="contact-icons">
-                    <img src="email-icon.png" alt="Email Icon" width="24" height="24">
-                    <p>Email: <a href="mailto:olabibahaaeldine@gmail.com">olabibahaaeldine@gmail.com</a></p>
-                </div>
-                <div class="contact-icons">
-                    <img src="linkedin-icon.png" alt="LinkedIn Icon" width="24" height="24">
-                    <p>LinkedIn: <a href="http://linkedin.com/in/bahaaeldineolabi" target="_blank">http://linkedin.com/in/bahaaeldineolabi</a></p>
-                </div>
-                <div class="contact-icons">
-                    <img src="location-icon.png" alt="Location Icon" width="24" height="24">
-                    <p>Location: Dubai, UAE</p>
+                <div class="contact-info">
+                    <div class="contact-icons">
+                        <img src="phone-icon.png" alt="Phone Icon" width="24" height="24">
+                        <p>Mobile: +971-54-5627172</p>
+                    </div>
+                    <div class="contact-icons">
+                        <img src="email-icon.png" alt="Email Icon" width="24" height="24">
+                        <p>Email: <a href="mailto:olabibahaaeldine@gmail.com">olabibahaaeldine@gmail.com</a></p>
+                    </div>
+                    <div class="contact-icons">
+                        <img src="linkedin-icon.png" alt="LinkedIn Icon" width="24" height="24">
+                        <p>LinkedIn: <a href="http://linkedin.com/in/bahaaeldineolabi" target="_blank">http://linkedin.com/in/bahaaeldineolabi</a></p>
+                    </div>
+                    <div class="contact-icons">
+                        <img src="location-icon.png" alt="Location Icon" width="24" height="24">
+                        <p>Location: Dubai, UAE</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="learning" class="content">
             <div class="section">
-                <div class="section">
-                    <h2>Education</h2>
-                    <h3>BBA, Marketing <span style="text-align:center; display:inline-block; width: 50%;">University of Balamand, LB</span> <span style="float:right;">03/2014 - 09/2019</span></h3>
-                    <p>Key accomplishments: 2018 - 2019 Dean's Honor-List | GPA 3.0 | Marketing Research | Entrepreneurship</p>
-                    <p>During my years of study, I acted as a faculty member assistant, that helped me develop an eye for design, creating marketing materials, organizing workshops and events, and capturing innovative moments and smiles.</p>
-                </div>
-                <ul>
-                    <h3>Applications & Tools</h3>
-                    <li>TeamWork | Canva | Smartsheet | MS 365 Apps | Google Ads | SQL</li>
-                </div>
-                <ul>
-                    <h3>Special Courses</h3>
-                    <li>McKinsey Forward Program | Learning how to learn | Digital marketing | Business Planning & ROI</li>
-                </ul>
+                <h2>Education</h2>
+                <h3>BBA, Marketing <span style="text-align:center; display:inline-block; width: 50%;">University of Balamand, LB</span> <span style="float:right;">03/2014 - 09/2019</span></h3>
+                <p>Key accomplishments: 2018 - 2019 Dean's Honor-List | GPA 3.0 | Marketing Research | Entrepreneurship</p>
+                <p>During my years of study, I acted as a faculty member assistant, that helped me develop an eye for design, creating marketing materials, organizing workshops and events.</p>
             </div>
         </div>
 
